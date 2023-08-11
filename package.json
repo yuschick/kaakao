@@ -1,0 +1,43 @@
+{
+  "name": "kaakao",
+  "description": "",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "yarn lint -- --fix",
+    "prettier": "prettier ./ --check",
+    "prettier:fix": "yarn prettier -- --write",
+    "format": "yarn prettier:fix && yarn lint:fix"
+  },
+  "repository": "git@github.com:yuschick/kaakao.git",
+  "author": "Daniel Yuschick <daniel.yuschick@gmail.com>",
+  "license": "MIT",
+  "sideEffects": false,
+  "bugs": {
+    "url": "https://github.com/yuschick/kaakao/issues"
+  },
+  "homepage": "https://github.com/yuschick/kaakao#readme",
+  "keywords": [],
+  "devDependencies": {
+    "@types/react": "^18.2.20",
+    "autoprefixer": "^10.4.14",
+    "classnames": "^2.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "postcss": "^8.4.27",
+    "postcss-nested": "^6.0.1",
+    "stylelint": "^15.10.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-plugin-defensive-css": "^0.8.1",
+    "stylelint-plugin-logical-css": "^0.12.0"
+  }
+}
