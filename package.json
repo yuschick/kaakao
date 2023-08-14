@@ -21,8 +21,6 @@
     "keywords": [],
     "devDependencies": {
         "@types/react": "^18.2.20",
-        "@typescript-eslint/eslint-plugin": "^6.4.0",
-        "@typescript-eslint/parser": "^6.4.0",
         "autoprefixer": "^10.4.14",
         "classnames": "^2.3.2",
         "eslint": "^8.47.0",
