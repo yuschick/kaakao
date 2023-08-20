@@ -21,6 +21,8 @@
     "homepage": "https://github.com/yuschick/kaakao#readme",
     "keywords": [],
     "devDependencies": {
+        "@commitlint/cli": "^17.7.1",
+        "@commitlint/config-conventional": "^17.7.0",
         "@types/react": "^18.2.20",
         "autoprefixer": "^10.4.14",
         "classnames": "^2.3.2",
