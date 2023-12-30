@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
+    "baseUrl": "src",
     "declaration": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
@@ -11,6 +11,9 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true, 
     "noUnusedParameters": true,
+    "paths": {
+      "@types/*": ["types/*"],
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
@@ -21,5 +24,5 @@
   "include": ["src"],
   "exclude": [
     "src/**/__docs__","src/**/__test__"
-  ]
+  ],
 }
