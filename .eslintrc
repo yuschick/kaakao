@@ -5,7 +5,7 @@
   },
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "jest-dom"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -15,10 +15,17 @@
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:prettier/recommended",
     "plugin:storybook/recommended",
-    "prettier"
+    "plugin:prettier/recommended"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".tsx"]
+      },
+      "typescript": {}
+    }
+  },
   "rules": {
     "import/order": [
       "error",

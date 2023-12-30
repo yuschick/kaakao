@@ -15,7 +15,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ES5", 
-    "types": ["@testing-library/jest-dom"],
+    "types": ["@testing-library/jest-dom", "node"],
     "useDefineForClassFields": true,
   },
   "include": ["src"],
