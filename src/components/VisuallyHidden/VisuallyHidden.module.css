@@ -1,13 +1,13 @@
-@layer kaakao {
-    .visually-hidden {
-        position: absolute;
-        display: inline-block;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        border: none;
-        clip: rect(0 0 0 0);
-        block-size: 1px;
-        inline-size: 1px;
-    }
+@layer kaakao.ui {
+  .visually-hidden {
+    position: absolute;
+    display: inline-block;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    clip: rect(0 0 0 0);
+    inline-size: 1px;
+    block-size: 1px;
+  }
 }

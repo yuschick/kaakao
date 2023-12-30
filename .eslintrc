@@ -1,22 +1,54 @@
 {
   "env": {
     "jest": true,
-    "browser": true 
+    "browser": true
   },
   "root": true,
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "extends": [
-    "eslint:recommended",   
-    "plugin:react/recommended",  
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "prettier",           
-    "plugin:prettier/recommended", 
-    "plugin:react-hooks/recommended", 
-    "plugin:storybook/recommended" 
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended",
+    "prettier"
   ],
   "rules": {
-    "react/react-in-jsx-scope": "off",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],
+    "react-hooks/exhaustive-deps": "error",
+    "react/display-name": "off",
+    "react/jsx-boolean-value": ["error", "never"],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "allow": "as-needed",
+        "extensions": [".tsx", ".jsx"]
+      }
+    ],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true,
+        "shorthandLast": true
+      }
+    ],
+    "react/no-unknown-property": [
+      "error",
+      { "ignore": ["inert", "fetchPriority"] }
+    ],
+    "react/prop-types": "warn",
+    "react/react-in-jsx-scope": "off"
   }
 }
