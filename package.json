@@ -19,7 +19,6 @@
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
     "prepare": "npm run build",
     "test": "vitest run",
-    "test:ui": "vitest --ui",
     "test:watch": "vitest",
     "storybook": "storybook dev -p 6006"
   },
