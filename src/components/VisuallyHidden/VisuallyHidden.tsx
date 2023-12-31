@@ -20,7 +20,7 @@ export function VisuallyHidden({
   return (
     <Element
       {...htmlAttributes}
-      className={classNames(className, styles.visuallyHidden)}
+      className={classNames(className, styles['visually-hidden'])}
     >
       {children}
     </Element>

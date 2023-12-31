@@ -12,9 +12,7 @@ const preview: Preview = {
       },
     },
     options: {
-      storySort: {
-        method: 'alphabetical',
-      },
+      storySort: (a, b) => (a.name === 'Docs' ? -1 : a.name < b.name ? -1 : 1),
     },
   },
 };

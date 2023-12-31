@@ -1,6 +1,10 @@
-```
-<Meta of={Button} title="Button" />
-```
+import { Canvas, Meta } from '@storybook/blocks';
+import * as VisuallyHidden from './VisuallyHidden.stories.tsx';
+
+<Meta
+  of={VisuallyHidden}
+  title="Visualy Hidden"
+/>
 
 # Visually Hidden
 
@@ -10,9 +14,7 @@ inclusivity without impacting the visual design.
 
 ## Example
 
-```
-<Canvas of={Button.Primary} />
-```
+<Canvas of={VisuallyHidden.Default} />
 
 ## Usage
 
@@ -30,15 +32,43 @@ const SkipLink = () => (
 
 > Extended from _`HTMLAttributes<HTMLElement>`_
 
-### `as`
-
-_**Type**: `keyof IntrinsicElements` **Default**: `span` **Required**: No_
-
-The HTML element to render the visually hidden content within.
-
-### `children`
-
-_**Type**: `ReactNode` **Default**:`undefined` **Required**: Yes_
-
-The content to be made available to assistive technologies but visually hidden
-from the UI.
+<table>
+  <thead>
+    <th>Prop</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Required</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>as</code>
+      </td>
+      <td>
+        <code>keyof IntrinsicElements</code>
+      </td>
+      <td>
+        <code>span</code>
+      </td>
+      <td>No</td>
+      <td>The HTML element to render the visually hidden content within.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>children</code>
+      </td>
+      <td>
+        <code>ReactNode</code>
+      </td>
+      <td>
+        <code>undefined</code>
+      </td>
+      <td>Yes</td>
+      <td>
+        The content to be made available to assistive technologies but visually
+        hidden from the UI.
+      </td>
+    </tr>
+  </tbody>
+</table>
