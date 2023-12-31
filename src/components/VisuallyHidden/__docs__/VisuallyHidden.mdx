@@ -1,45 +1,74 @@
-{/* <Meta of={Button} title="Button" /> */}
+import { Canvas, Meta } from '@storybook/blocks';
+import * as VisuallyHidden from './VisuallyHidden.stories.tsx';
 
-# Button
+<Meta
+  of={VisuallyHidden}
+  title="Visualy Hidden"
+/>
 
-Visually Hidden is used when an element needs to be available to assistive
-technologies like screen readers, but be otherwise hidden. Use this component to
-provide context to information that may only be visually communicated.
+# Visually Hidden
 
-#### Example
+A Visually Hidden component is used to hide content from view while maintaining
+accessibility for screen readers and assistive technologies. This ensures
+inclusivity without impacting the visual design.
 
-{/* <Canvas of={Button.Primary} /> */}
+## Example
+
+<Canvas of={VisuallyHidden.Default} />
 
 ## Usage
 
 ```ts
-import {Button} from "sld-ui";
+import { VisuallyHidden } from "kaakao";
 
-const Example = () => {
-  return (
-      <Button
-        size={"small"}
-        text={"Button"}
-        onClick={()=> console.log("Clicked")}
-        primary
-      />
-  );
-};
-
-export default Example;
+const SkipLink = () => (
+  <VisuallyHidden>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+  </VisuallyHidden>
+);
 ```
 
-#### Arguments
+## Arguments
 
-- **text** _`() => void`_ - A string that represents the text content of the
-  button.
-- **primary** - A boolean indicating whether the button should have a primary
-  styling or not. Typically, a primary button stands out as the main action in a
-  user interface.
-- **disabled** - A boolean indicating whether the button should be disabled or
-  not. When disabled, the button cannot be clicked or interacted with.
-- **size** - A string with one of three possible values: "small," "medium," or
-  "large." It defines the size or dimensions of the button.
-- **onClick** - A function that is called when the button is clicked. It
-  receives a MouseEventHandler for handling the click event on the button
-  element.
+> Extended from _`HTMLAttributes<HTMLElement>`_
+
+<table>
+  <thead>
+    <th>Prop</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Required</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>as</code>
+      </td>
+      <td>
+        <code>keyof IntrinsicElements</code>
+      </td>
+      <td>
+        <code>span</code>
+      </td>
+      <td>No</td>
+      <td>The HTML element to render the visually hidden content within.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>children</code>
+      </td>
+      <td>
+        <code>ReactNode</code>
+      </td>
+      <td>
+        <code>undefined</code>
+      </td>
+      <td>Yes</td>
+      <td>
+        The content to be made available to assistive technologies but visually
+        hidden from the UI.
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
+    "baseUrl": ".",
     "declaration": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
@@ -11,6 +11,10 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true, 
     "noUnusedParameters": true,
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@types/*": ["src/types/*"],
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,6 +24,6 @@
   },
   "include": ["src"],
   "exclude": [
-    "src/**/__docs__","src/**/__test__"
-  ]
+    "src/**/__docs__/*.mdx","src/**/__test__"
+  ],
 }
